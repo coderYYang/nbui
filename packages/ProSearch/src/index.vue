@@ -2,8 +2,8 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-03-02 16:54:24
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-03-06 15:54:35
- * @FilePath: /pro-components/src/components/ProSearch/index.vue
+ * @LastEditTime: 2023-03-07 15:57:25
+ * @FilePath: /pro-components/packages/ProSearch/index.vue
  * @Description: 超级搜索
 -->
 <template>
@@ -106,7 +106,7 @@ export default {
      * @return {*}
      */
     handleSearch() {
-      const data = this.$deepClone(this.model)
+      const data = { ...this.model }
       // 处理时间
       if (this.options.datePicker && this.dateRange && this.dateRange.length) {
         // eslint-disable-next-line no-extra-semi
@@ -121,7 +121,7 @@ export default {
      * @return {*}
      */
     handleReset() {
-      const data = this.$deepClone(this.model)
+      const data = { ...this.model }
       // 将所有值置为空
       Object.keys(data).forEach((key) => (data[key] = ''))
       this.model = data

@@ -2,8 +2,8 @@
  * @Author: yy 691335336@qq.com
  * @Date: 2023-02-28 17:56:26
  * @LastEditors: yy 691335336@qq.com
- * @LastEditTime: 2023-03-07 11:46:07
- * @FilePath: /pro-components/src/components/ProTable/index.vue
+ * @LastEditTime: 2023-03-07 15:56:32
+ * @FilePath: /pro-components/packages/ProTable/index.vue
  * @Description: 超级表格
 -->
 <template>
@@ -54,8 +54,7 @@
           <!-- 三个一排的情况，去掉隐藏的按钮后的长度 -->
           <!-- v-permission="item.permission" -->
           <el-button
-            v-for="(item, index) in options.operation.data"
-            v-if="index < 2"
+            v-for="item in options.operation.data"
             :key="item.label"
             v-bind="item"
             :type="item.type"
@@ -64,7 +63,7 @@
           >
             {{ item.label }}
           </el-button>
-          <span class="el-dropdown-link">
+          <!-- <span class="el-dropdown-link">
             <i class="el-icon-d-arrow-right el-icon--right"></i>
             更多
           </span>
@@ -79,7 +78,7 @@
                 {{ item.label }}
               </el-dropdown-item>
             </el-dropdown-menu>
-          </el-dropdown>
+          </el-dropdown> -->
           <!-- <el-dropdown v-for="(item, index) in options.operation.data" :key="index" size="mini">
             <span class="el-dropdown-link">
               <i class="el-icon-d-arrow-right el-icon--right"></i>

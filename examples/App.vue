@@ -7,13 +7,11 @@
 </template>
 
 <script>
-import ProTable from './components/ProTable'
 export default {
   name: 'App',
   data() {
     return {}
   },
-  components: { ProTable },
   methods: {}
 }
 </script>
