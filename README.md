@@ -1,24 +1,16 @@
-# pro-table
+# nbyyui
 
-## Project setup
-```
-npm install
-```
+# 插件基于 elementui 封装，需要引入 elementui
 
-### Compiles and hot-reloads for development
+## 下载
+
 ```
-npm run serve
+npm install nbyyui
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 使用
 
-### Lints and fixes files
 ```
-npm run lint
+import nbyyui from 'nbyyui'
+Vue.use(nbyyui)
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
